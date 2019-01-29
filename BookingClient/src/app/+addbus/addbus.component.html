@@ -1,0 +1,66 @@
+<form  id="smart-form-register" class="smart-form"
+[saUiValidate]="validationOptions"
+      novalidate="novalidate" >
+  <header>
+    Registration form
+  </header>
+
+  <fieldset>
+    <section>
+      <label class="input"> <i class="icon-append fa fa-user"></i>
+        <input type="text" [(ngModel)]="buses.busname" name="busname" placeholder="Busname"/>
+        <b class="tooltip tooltip-bottom-right">Needed to add the bus</b> </label>
+    </section>
+
+
+    <section>
+      <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+        <input type="text" [(ngModel)]="buses.departure" name="departure" placeholder="Departure"/>
+        <b class="tooltip tooltip-bottom-right">Needed to discover departure point</b> </label>
+    </section>
+
+    <section>
+      <label class="input"> <i class="icon-append fa fa-lock"></i>
+        <input type="text" [(ngModel)]="buses.destination" name="destination" placeholder="destination" />
+        <b class="tooltip tooltip-bottom-right">Needed to discover destination point</b> </label>
+    </section>
+
+    
+    <div class="row">
+      <section class="col col-6">
+        <label class="input"> <i class="icon-append fa fa-lock"></i>
+        <input type="TIME" [(ngModel)]="buses.timeOfdeparture" name="timeOfdeparture" placeholder="timeOfdeparture" [(ngModel)]="myTimeValue"/>
+        <b class="tooltip tooltip-bottom-right">Needed to set departure time</b> </label>
+      </section>
+      <section class="col col-6">
+        <label class="input"> <i class="icon-append fa fa-calendar"></i>
+          <input type="date" [(ngModel)]="buses.dateOfdeparture" name="dateOfdeparture"/>
+        </label>
+      </section>
+      <!--section class="col col-6">
+        <label class="input"> <i class="icon-append fa fa-calendar"></i>
+          <input type="date" name="request" placeholder="Request activation on"
+                 saUiDatepicker date-format="dd/mm/yy" />
+        </label>
+      </section-->
+    </div>
+    <section>
+      <label class="input"> <i class="icon-append fa fa-lock"></i>
+        <input type="number" [(ngModel)]="buses.busLimit" name="busLimit" placeholder="bus limit"/>
+        <b class="tooltip tooltip-bottom-right">Bus limit needed</b> </label>
+    </section>
+    <section >
+        <label class="input"> <i class="icon-append fa fa-lock"></i>
+          <input type="number" [(ngModel)]="buses.busPrice" name="busPrice" placeholder="busPrice"/>
+          <b class="tooltip tooltip-bottom-right">Bus price needed</b> </label>
+    </section>
+
+  </fieldset>
+
+  
+  <footer>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+      Validate Form
+    </button>
+  </footer>
+</form>

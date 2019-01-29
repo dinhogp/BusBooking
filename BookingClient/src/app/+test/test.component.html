@@ -1,0 +1,66 @@
+ <div id="content">
+    <div class="row">
+        <sa-big-breadcrumbs [items]="['Home']" icon="home"
+                            class="col-xs-12 col-sm-7 col-md-7 col-lg-4"></sa-big-breadcrumbs>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div  class="well">
+
+                <h1>My Test Page <i>obinna</i></h1>
+                <p>Testing testing 1-2-3-4-5-...I am coming oooo..Testing 1-2-3-4-5.</p>
+            </div>
+        </div>
+    </div>
+
+    <sa-stats></sa-stats>
+
+    <div class="row">
+        <article class="col-sm-12">
+
+            <header>
+              <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+  
+              <h2>Normal Table</h2>
+            </header>
+            <div>
+              <div class="widget-body">
+                <p>Adds borders to any table row within <code>&lt;table&gt;</code> by adding the
+                  <code>.table-bordered</code>
+                  with the base class</p>
+  
+                <div class="table-responsive">
+  
+                  <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                      <th>FIRSTNAME</th>
+                      <th>LASTNAME</th>
+                      <th>REG_OF_RES</th>
+                      <th>hasPAID</th>
+                      <th>dateBOOKED</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let bookee of bookees,let i = index">
+                      <td>{{bookee.student.firstname}}</td>
+                      <td>{{bookee.student.lastname}}</td>
+                      <td>{{bookee.student.regionOfresidence}}</td>
+
+                      <td><span class="label label-success">{{bookee.hasPaid}}</span></td>
+                      <td>{{bookee.dateBooked}}</td>
+                      <!--td *ngIf="{{customer.isGold}}"><span class="label label-danger">{{customer.isGold}}</span></td-->
+                    </tr>
+                   
+                    </tbody>
+                  </table>
+  
+                </div>
+  
+              </div>
+            </div>
+        </article>
+    </div>
+
+</div> 

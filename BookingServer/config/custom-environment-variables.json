@@ -1,0 +1,4 @@
+{
+  "jwtPrivateKey": "busBookee_jwtPrivateKey",
+  "db": "busbookee_db"
+}
